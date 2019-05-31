@@ -23,6 +23,11 @@
 .collaborators-st > ul > li {
     list-style: none;
 }
+h1{
+	font-family:verdana;
+	text-align:center;
+	color:red;
+}
 
 footer {
   position:relative;
