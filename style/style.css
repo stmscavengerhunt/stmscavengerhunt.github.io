@@ -1,4 +1,5 @@
-*{
+/* *{ */
+body{
   /* font-family: Times New Roman; */
   font-size: 16px;
 }
@@ -6,35 +7,80 @@
 .body-color{
 }
 
-.col-sm-3 > .card{
+.col-sm-3 > .card {
   margin-bottom: 20px;
   /* background-color: #F4FEC1; */
   border-radius: 20px;
 }
 
-#background-cl{
+.card {
+  margin : 1.25em;
+}
+
+.card-block {
+  padding : 1.25em;
+}
+
+#background-cl {
   background-color: #F6f6f8;
 }
 
-.collaborators-st{
+.collaborators-st {
   text-align: center;
 }
 
 .collaborators-st > ul > li {
-    list-style: none;
+  list-style: none;
 }
-h1{
-	font-family:verdana;
-	text-align:center;
-	color:red;
+
+h1 {
+  font-family:verdana;
+  text-align:center;
+  color:red;
 }
 
 footer {
-  position:relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: white;
-  color: black;
-  text-align: center;
+  position         : fixed;
+  bottom           : 0;
+  width            : 100%;
+  text-align       : center;
+  background-color : #FFFFFFFF;
+}
+
+#searchForm {
+  margin-right : 1em;
+}
+
+#searchBox {
+  border-radius : .5em;
+}
+
+#searchButton {
+  margin-left      : .5em;
+  border-radius    : .5em;
+  border-color     : #FCC #C88 #C88 #FCC;
+  background-color : #CC0000;
+  color            : #FFFFFF;
+}
+
+#searchButton:hover {
+  background-color : #FF0000;
+  box-shadow       : 0em 0em 1em .125em #FF000066;
+  text-shadow      : 0em 0em .5em .25em #FFFF00;
+}
+
+.searchMatch {
+  background-color : #FFFF00;
+}
+
+.schedules {
+  text-align : center;
+}
+
+.redText {
+  color : red;
+}
+
+.blueText {
+  color : blue;
 }
