@@ -1,6 +1,7 @@
 // Page search functionality
 // Author : Dave Kahn
 // Date   : Novermber 2019
+// Update : November 24, 2019 Improved search functionality -Dave
 
 // GLOBALS
 var restoreNode     = null;
