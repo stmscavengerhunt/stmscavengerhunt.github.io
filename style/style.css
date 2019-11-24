@@ -74,8 +74,8 @@ footer {
 }
 
 .searchError {
-  float        : left;
-  clear        : both;
+  float         : left;
+  clear         : both;
   margin-bottom : -.5rem !important;
 }
 
