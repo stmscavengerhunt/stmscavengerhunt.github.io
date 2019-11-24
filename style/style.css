@@ -7,16 +7,15 @@ body{
 
 .col-sm-3 > .card {
   margin-bottom: 20px;
-  /* background-color: #F4FEC1; */
   border-radius: 20px;
 }
 
 .card {
-  margin : 1.25em;
+  margin : 1.25rem;
 }
 
 .card-block {
-  padding : 1.25em;
+  padding : 1.25rem;
 }
 
 #background-cl {
@@ -46,16 +45,19 @@ footer {
 }
 
 #searchForm {
-  margin-right : 1em;
+  margin-right : 1rem;
 }
 
 #searchBox {
-  border-radius : .5em;
+  border-radius : .5rem;
+  padding       : .70rem;
 }
 
 #searchButton {
-  margin-left      : .5em;
-  border-radius    : .5em;
+  width            : 6rem;
+  padding          : .70rem;
+  margin-left      : .5rem;
+  border-radius    : .5rem;
   border-color     : #FCC #C88 #C88 #FCC;
   background-color : #CC0000;
   color            : #FFFFFF;
@@ -63,12 +65,18 @@ footer {
 
 #searchButton:hover {
   background-color : #FF0000;
-  box-shadow       : 0em 0em 1em .125em #FF000066;
-  text-shadow      : 0em 0em .5em .25em #FFFF00;
+  box-shadow       : 0rem 0rem 1rem .125rem #FF000066;
+  text-shadow      : 0rem 0rem .5rem .25rem #FFFF00;
 }
 
 .searchMatch {
   background-color : #FFFF00;
+}
+
+.searchError {
+  float        : left;
+  clear        : both;
+  margin-bottom : -.5rem !important;
 }
 
 .schedules {
