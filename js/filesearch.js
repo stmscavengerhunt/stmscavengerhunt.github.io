@@ -138,7 +138,10 @@ function processText (node, matches) {
         // Matching nodes only
         removeNode = parentClone.childNodes [i];
         insertPoint = parentClone.childNodes [i + 1];
-      } // Ignore non matching nodes
+      } else { // Ignore non matching nodes
+        console.warn ("node: %O, parent.childNodes [%d]: %O",
+                       node, i, parent.childNodes [i]);
+      }
     }
   }
 
@@ -298,10 +301,13 @@ function clearSearch (searchStr) {
   firstMatch = true;
   // console.clear ();
 
-  if (restoreNode != null) {
+  if (globalRootNode != null) { // Regardless of restoreNode
+    globalRootNode.parentNode.querySelector ("#searchBox").value = searchStr;
+  }
+
+  if (restoreNode != null && globalRootNode != null) {
     // Because the restoreNode value contains the >last< search
     // restoreNode.parentNode.querySelector ("#searchBox").value = searchStr;
-    globalRootNode.parentNode.querySelector ("#searchBox").value = searchStr;
     globalRootNode.parentNode.replaceChild (restoreNode, globalRootNode);
     globalRootNode = null;
   }
