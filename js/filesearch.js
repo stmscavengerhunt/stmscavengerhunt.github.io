@@ -2,6 +2,7 @@
 // Author : Dave Kahn
 // Date   : Novermber 2019
 // Update : November 24, 2019 Improved search functionality -Dave
+// Update : November 25, 2019 Bug fix to ignore non matching nodes. -Dave
 
 // GLOBALS
 var restoreNode     = null;
