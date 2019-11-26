@@ -3,6 +3,8 @@
 // Date   : Novermber 2019
 // Update : November 24, 2019 Improved search functionality -Dave
 // Update : November 25, 2019 Bug fix to ignore non matching nodes. -Dave
+// Update : November 25, 2019 Bug fix to clear everything properly. -Dave
+// Update : November 25, 2019 Moved/removed obsolete/extraneous comments. -Dave
 
 // GLOBALS
 var restoreNode     = null;
@@ -139,7 +141,10 @@ function processText (node, matches) {
         // Matching nodes only
         removeNode = parentClone.childNodes [i];
         insertPoint = parentClone.childNodes [i + 1];
-      } // Ignore non matching nodes
+      } else { // Ignore non matching nodes
+        console.warn ("node: %O, parent.childNodes [%d]: %O",
+                       node, i, parent.childNodes [i]);
+      }
     }
   }
 
@@ -299,13 +304,13 @@ function clearSearch (searchStr) {
   firstMatch = true;
   // console.clear ();
 
-  if (restoreNode != null) {
-    // Because the restoreNode value contains the >last< search
-    // restoreNode.parentNode.querySelector ("#searchBox").value = searchStr;
-    globalRootNode.parentNode.querySelector ("#searchBox").value = searchStr;
+  if (restoreNode != null && globalRootNode != null) {
     globalRootNode.parentNode.replaceChild (restoreNode, globalRootNode);
     globalRootNode = null;
   }
+
+  // Because the restoreNode value contains the >last< search
+  document.body.querySelector ("#searchBox").value = searchStr;
 }
 
 
