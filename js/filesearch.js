@@ -134,14 +134,10 @@ function processText (node, matches) {
   if (parent.childNodes.length > 1) {
     for (i = 0; i < parent.childNodes.length; i++) {
       if (node === parent.childNodes [i]) {
+        // Matching nodes only
         removeNode = parentClone.childNodes [i];
         insertPoint = parentClone.childNodes [i + 1];
-      } else {
-        // I put this here just in case. It >should< be impossible to get here.
-        console.warn ("No match: node: %O, childNode [%d]: %O",
-                      node, i, parent.childNodes [i]);
-        handleError ("A system error occurred. Please notify administrator");
-      }
+      } // Ignore non matching nodes
     }
   }
 
